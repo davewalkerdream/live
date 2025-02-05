@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget de Metas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            font-family: 'Press Start 2P', sans-serif;
+            background: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .widget {
+            width: 1080px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            animation: slideAnimation 21s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .slide img {
+            image-rendering: pixelated;
+            height: 25px;
+        }
+        .slide:nth-child(1) { background: #9146ff; animation-delay: 0s; }
+        .slide:nth-child(2) { background: #ff0000; animation-delay: 3s; }
+        .slide:nth-child(3) { background: #ff0050; animation-delay: 6s; }
+        .slide:nth-child(4) { background: #ff0050; animation-delay: 9s; }
+        .slide:nth-child(5) { background: #00bfa5; animation-delay: 12s; }
+        .slide:nth-child(6) { background: #00bfa5; animation-delay: 15s; }
+        .slide:nth-child(7) { background: #23272A; animation-delay: 18s; }
+
+        @keyframes slideAnimation {
+            0% { transform: translateX(100%); opacity: 0; }
+            10% { transform: translateX(0); opacity: 1; }
+            30% { transform: translateX(0); opacity: 1; }
+            40% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(-100%); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="widget">
+        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Twitch_logo_2011.svg"> Siga o streamer!</div>
+        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/YouTube_icon_%282013-2017%29.svg"> Inscreva-se no canal!</div>
+        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/TikTok_logo.svg"> Siga no TikTok!</div>
+        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/TikTok_logo.svg"> Envie um presente para apoiar a live ❤️</div>
+        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pix_Logo_2020.svg"> Envie uma msg de voz a partir de R$1!</div>
+        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pix_Logo_2020.svg"> livepix.gg/davewalkerdream</div>
+        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Discord_logo_2023.svg"> Comunidade do Discord no link da bio do TikTok!</div>
+    </div>
+</body>
+</html>
